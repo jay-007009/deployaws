@@ -1,15 +1,15 @@
 {
   "name": "test-lambda",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Clone",
   "main": "handler.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "test": "^27.5.1"
+    "jest": "^25.0.0"
   }
 }
