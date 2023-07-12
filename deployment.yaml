@@ -18,17 +18,17 @@ Resources:
               Principal:
                 Service: lambda.amazonaws.com
               Action: sts:AssumeRole
-        Policies:
-          - PolicyName: "Aws-demo-lambda-policy"
-            PolicyDocument:
-              Version: "2012-10-17"
-              Statement:
-                - Effect: "Allow"
-                  Action:
-                    - "logs:CreateLogGroup"
-                    - "logs:CreateLogStream"
-                    - "logs:PutLogEvents"
-                  Resource: "*"
+      Policies:
+        - PolicyName: "Aws-demo-lambda-policy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action:
+                  - "logs:CreateLogGroup"
+                  - "logs:CreateLogStream"
+                  - "logs:PutLogEvents"
+                Resource: "*"
 
   lambdaFunction:
     Type: AWS::Lambda::Function
@@ -44,7 +44,7 @@ Resources:
         Variables:
           key1: value1 # A map of key-value pairs that the Lambda function can access
       Code:
-        S3Bucket: demo-upload
+        S3Bucket: demo-upload2
         S3Key: lambda.zip
 
       Tags:
